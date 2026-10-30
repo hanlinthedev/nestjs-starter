@@ -1,0 +1,8 @@
+model User {
+  id           Uuid              @id @default(uuid())
+  email        String            @unique
+  passwordHash String
+  name         String?
+  createdAt    TimestamptzString  @default(now())
+  updatedAt    temporal.updatedAtString()
+}
